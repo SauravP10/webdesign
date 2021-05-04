@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <link href="" rel="stylesheet">
+
+
+  <title>Learn CSS</title>
+
+<link href="./main.550dcf66.css" rel="stylesheet"></head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./og.html" title="">
+          <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
+          Web Design Tutorial
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./og.html" title="">Home</a></li>
+          <li><a href="./project.html" title="">About Us</a></li>
+          <li><a href="./references.html" title="">References</a></li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="text-left">
+            <h1 class="text-center">Getting Started with CSS</h1>
+            <p>In this article we will explain some basic concepts of CSS, learning some practical things about the language along the way.
+            </p>
+          </div>
+          <div class="text-left">
+            <h3>What is CSS?</h3>
+            <p>
+              CSS, or Cascading Styles Sheets, is a way to style and present HTML. Whereas the HTML is the meaning or content, the style sheet is the presentation of that document. Styles don’t smell or taste anything like HTML, they have a format of ‘property: value’ and most properties can be applied to most HTML tags.
+            </p>
+          </div>
+          <div class="text-left">
+            <h3>3 Ways to Apply CSS</h3>
+            <strong> 1. Inline</strong>
+            <p>
+              Inline styles are plonked straight into the HTML tags using the <strong>style</strong> attribute. But, if you remember, the best-practice approach is that the HTML should be a stand-alone, presentation free document, and so in-line styles should be avoided wherever possible.            
+            </p>
+            <strong> 2. Internal</strong>
+            <p>
+              Embedded, or internal, styles are used for the whole page. Inside the <strong>head</strong> element, the <strong>style</strong> tags surround all of the styles for the page. Although preferable to soiling our HTML with inline presentation, it is similarly usually preferable to keep the HTML and the CSS files separate, and so we are left with our savior…
+            </p>
+            <strong> 3. External</strong>
+            <p>
+              External styles are used for the whole, multiple-page website. There is a separate CSS file which is referenced within the head of all of the HTML pages on your site, like so:           
+            </p>
+            <code>&lt;link rel="stylesheet" href="style.css"></code>
+          </div>
+          <div class="text-left">
+            <h3>General Units</h3>
+            <p>
+              There are many property-specific units for values used in CSS, but there are some general units that are used by a number of properties and it is worth familiarizing yourself with these before continuing.          
+            </p>
+            <ul>
+              <li> px (such as font-size: 12px) is the unit for pixels.</li>
+              <li> em (such as font-size: 2em) is the unit for the calculated size of a font. So “2em”, for example, is two times the current font size.</li>
+              <li> pt (such as font-size: 12pt) is the unit for points, for measurements typically in printed media.</li>
+              <li> % (such as width: 80%) is the unit for… wait for it… percentages.</li>
+            </ul>
+            <p>
+              Other units include pc (picas), cm (centimeters), mm (millimeters) and in (inches). When a value is zero, you do not need to state a unit.
+            </p>
+          </div>
+          <div class="text-left">
+            <h3>Colors</h3>
+            <p>
+              CSS brings 16,777,216 colors to your disposal. They can take the form of a name, an RGB (red/green/blue) value or a hex code. The following values, to specify full-on as red-as-red-can-be, all produce the same result:
+            </p>
+            <ul>
+              <li> red</li>
+              <li> rgb(255,0,0)</li>
+              <li> rgb(100%,0%,0%)</li>
+              <li> #ff0000</li>
+              <li> #f00</li>
+            </ul>
+            <p>
+              Predefined color names include aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow. transparent is also a valid value. With the possible exception of black and white, color names have limited use in a modern, well-designed web sites because they are so specific and limiting.
+            </p>
+            <p>
+              The three values in the RGB value are from 0 to 255, 0 being the lowest level (no red, for example), 255 being the highest level (full red, for example). These values can also be a percentage.
+            </p>
+            <p>
+              Hexadecimal (previously and more accurately known as “sexadecimal”) is a base-16 number system. We are generally used to the decimal number system (base-10, from 0 to 9), but hexadecimal has 16 digits, from 0 to f.
+            </p>
+            <p>
+              The hex number is prefixed with a hash character (#) and can be three or six digits in length. Basically, the three-digit version is a compressed version of the six-digit (#ff0000 becomes #f00, #cc9966 becomes #c96, etc.). The three-digit version is easier to decipher (the first digit, like the first value in RGB, is red, the second green and the third blue) but the six-digit version gives you more control over the exact color.
+            </p>
+
+          </div>
+          <div class="text-left">
+            <h3>Background Color</h3>
+            <p>
+              Colors can be applied by using color and background-color (note that this must be the American English “color” and not “colour”).</p>
+            <p>
+              A blue background and yellow text could look like this:
+            </p>
+            <pre><code>
+              h1 {
+                  color: yellow;
+                  background-color: blue;
+              }
+            </code></pre>
+            <p>
+              These colors might be a little too harsh, so you could change the code of your CSS file for slightly different shades:
+            </p>
+            <pre><code>
+              body {
+                  font-size: 14px;
+                  color: navy;
+              }
+              
+              h1 {
+                  color: #ffc;
+                  background-color: #009;
+              }
+            </code></pre>
+            <p>
+              You can apply the color and background-color properties to most HTML elements, including body, which will change the colors of the page and everything in it.
+            </p>
+            <p>
+              <strong>Want to learn more? Visit <a href="./references.html">our references page</a> to pick up where we left off.</strong>
+            </p>
+
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</body>

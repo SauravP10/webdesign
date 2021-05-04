@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <link href="" rel="stylesheet">
+
+
+  <title>Learn JavaScript</title>
+
+<link href="./main.550dcf66.css" rel="stylesheet"></head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./og.html" title="">
+          <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
+          Web Design Tutorial
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./og.html" title="">Home</a></li>
+          <li><a href="./project.html" title="">About Us</a></li>
+          <li><a href="./references.html" title="">References</a></li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="text-left">
+            <h1 class="text-center">Introduction to JavaScript</h1>
+            <p>
+              Let’s see what’s so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+            </p>
+          </div>
+          <div class="text-left">
+            <h3>What is JavaScript?</h3>
+            <p>
+              JavaScript was initially created to “make web pages alive”. The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads. Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run. In this aspect, JavaScript is very different from another language called Java.
+            </p>
+              Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine. The browser has an embedded engine sometimes called a “JavaScript virtual machine”. Different engines have different “codenames”. For example:
+            <p>
+            </p>
+            <ul>
+              <li> V8 – in Chrome and Opera.</li>
+              <li> SpiderMonkey – in Firefox.</li>
+              <li> …There are other codenames like “Chakra” for IE, “ChakraCore” for Microsoft Edge, “Nitro” and “SquirrelFish” for Safari, etc.</li>
+            </ul>
+            <p>
+              The terms above are good to remember because they are used in developer articles on the internet. We’ll use them too. For instance, if “a feature X is supported by V8”, then it probably works in Chrome and Opera.
+            </p>
+            <p>
+            </p>
+          </div>
+          <div class="text-left">
+            <h3>The "script" Tag</h3>
+            <p>
+              JavaScript programs can be inserted almost anywhere into an HTML document using the &lt;script> tag. For instance:
+            </p>
+            <pre><code>
+              &lt;!DOCTYPE HTML>
+              &lt;html>
+                  &lt;body>
+                
+                  &lt;p>Before the script...&lt;/p>
+                
+                  &lt;script>
+                    alert( 'Hello, world!' );
+                    &lt;/script>
+                
+                    &lt;p>...After the script.&lt;/p>
+                
+                    &lt;/body>
+                    &lt;/html>
+              </code></pre>
+              <p>
+                The &lt;script> tag contains JavaScript code which is automatically executed when the browser processes the tag.
+              </p>
+          </div>
+          <div class="text-left">
+            <h3>External Scripts</h3>
+            <p>
+              If we have a lot of JavaScript code, we can put it into a separate file. Script files are attached to HTML with the src attribute:
+            </p>
+            <code>&lt;script src="/path/to/script.js">&lt;/script></code>
+            <p>
+              Here, /path/to/script.js is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, src="script.js" would mean a file "script.js" in the current folder. We can give a full URL as well. For instance:
+            </p>
+            <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js">&lt;/script></code>
+            <p>
+              As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files. The benefit of a separate file is that the browser will download it and store it in its cache. Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once. That reduces traffic and makes pages faster.
+            </p>
+            <p>
+              Note: A single &lt;script> tag can’t have both the src attribute and code inside. We must choose either an external &lt;script src="…"> or a regular &lt;script> with code. If you need the functionality of both, here's how to accomplish that:
+            </p>
+            <pre><code>
+              &lt;script src="file.js">&lt;/script>
+              &lt;script>
+                alert(1);
+                &lt;/script>
+            </code></pre>
+
+          </div>
+          <div class="text-left">
+            <h3>Primitive Methods</h3>
+            <p>
+              JavaScript allows us to work with primitives (strings, numbers, etc.) as if they were objects. They also provide methods to call as such. We will study those soon, but first we’ll see how it works because, of course, primitives are not objects (and here we will make it even clearer).
+            </p>
+            <p>
+              Let’s look at the key distinctions between primitives and objects. 
+            </p>
+            <p>A primitive:
+              <ul>
+                <li> Is a value of a primitive type.</li>
+                <li> There are 7 primitive types: string, number, bigint, boolean, symbol, null and undefined.</li>
+              </ul>
+            </p>
+            <p>An object:
+              <ul>
+                <li> Is capable of storing multiple values as properties.</li>
+                <li> Can be created with {}, for instance: {name: "John", age: 30}. There are other kinds of objects in JavaScript: functions, for example, are objects.</li>
+              </ul>
+            </p>
+            <p>One of the best things about objects is that we can store a function as one of its properties, like so:</p>
+            <pre><code>
+              let john = {
+                name: "John",
+                sayHi: function() {
+                  alert("Hi buddy!");
+                }
+              };
+              
+              john.sayHi(); // Hi buddy!
+            </code></pre>
+            <p>
+              So here we’ve made an object john with the method sayHi. Many built-in objects already exist, such as those that work with dates, errors, HTML elements, etc. They have different properties and methods.
+            </p>
+            <p>
+              But, these features come with a cost! Objects are “heavier” than primitives. They require additional resources to support the internal machinery.
+            </p>
+            <p>
+              <strong>Want to learn more? Visit <a href="./references.html">our references page</a> to pick up where we left off.</strong>
+            </p>
+
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</body>
